@@ -1,0 +1,29 @@
+input {
+	height: 40px;
+	width: 50%;
+	font-size: 14pt;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px solid #CFA636;
+	border-radius: 3px;
+	background-color: white;
+}
+
+a {
+	border: 1px solid #CFA636;
+	border-radius: 3px;
+	background-color: #F3CA5A;
+	color: white;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.content {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#errorMsg {
+	color: red;
+	font-size: 10pt;
+}

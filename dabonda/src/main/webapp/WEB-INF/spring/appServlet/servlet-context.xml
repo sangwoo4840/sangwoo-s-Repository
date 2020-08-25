@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven>
+		<message-converters register-defaults="true">
+			<beans:bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+				<beans:property name="supportedMediaTypes" value="text/plain;charset=UTF-8" />
+			</beans:bean>
+		</message-converters>
+	</annotation-driven>
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/resources/**" location="/resources/" />
+	<resources mapping="/css/**" location="/WEB-INF/views/css/" />
+	<resources mapping="/js/**" location="/WEB-INF/views/js/" />
+	<resources mapping="/images/**" location="/WEB-INF/views/images/" />
+	<resources mapping="/jqueryui/**" location="/WEB-INF/views/jqueryui/" />
+	<resources mapping="/jqgrid/**" location="/WEB-INF/views/jqgrid/" />
+	<resources mapping="/favicon.ico" location="/WEB-INF/views/images/favicon.ico" />
+	<resources mapping="/robots.txt" location="/WEB-INF/views/robots.txt" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+	<context:component-scan base-package="com.jangin.*" />
+	
+	<beans:bean id="mav"
+		class="org.springframework.web.servlet.ModelAndView" />
+	<beans:bean id="jacksonMessageConverter"
+		class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />
+	
+	<interceptors>
+		<interceptor>
+			<mapping path="/index"/> 
+			<mapping path="/stock"/> 
+			<mapping path="/stock/*"/>
+			<mapping path="/car"/>
+			<mapping path="/car/*"/>
+			<mapping path="/sms"/>
+			<mapping path="/sms/*"/>
+			<mapping path="/management"/>
+			<mapping path="/management/*"/>
+			<mapping path="/month_sales"/>
+			<mapping path="/month_sales/*"/>
+			<mapping path="/fix_sales"/>
+			<mapping path="/fix_sales/*"/>
+			<mapping path="/fix_sales2"/>
+			<mapping path="/fix_sales2/*"/>
+			<mapping path="/month_so"/>
+			<mapping path="/month_so/*"/>
+			<mapping path="/month_sod"/>
+			<mapping path="/month_sod/*"/>
+			<mapping path="/month_sales_sb"/>
+			<mapping path="/month_sales_sb/*"/>
+			<mapping path="/month_so_sb"/>
+			<mapping path="/month_so_sb/*"/>
+			<mapping path="/maps"/>
+			<mapping path="/maps/*"/>
+			<mapping path="/exchangerate"/>
+			<mapping path="/exchangerate/*"/>
+			<mapping path="/slide"/> <!-- 2016-03-10 -->
+			<mapping path="/slide/*"/>
+			<mapping path="/builtin"/> <!-- 2016-07-13 -->
+			<mapping path="/builtin/*"/>
+			<mapping path="/wardrobe"/> <!-- 2016-08-12 -->
+<!-- 			<mapping path="/wardrobe/*"/> -->
+			<beans:bean class="com.jangin.dabonda.DabondaService"/>
+		</interceptor>
+	</interceptors>
+	 <!-- 파일 업로드를 위한 bean추가 -->
+  <!-- MultipartResolver -->
+<!--   <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <property name="maxUploadSize" value="100000000"/>
+    <property name="maxInMemorySize" value="100000000"/>
+  </bean> -->
+</beans:beans>

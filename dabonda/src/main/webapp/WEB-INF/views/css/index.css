@@ -1,0 +1,36 @@
+hr {
+	margin-top: 55px;
+	margin-bottom: 25px;
+}
+
+a {
+	text-decoration: none;
+	color: #786E12;
+}
+
+.center {
+	text-align: center;
+}
+
+#logout {
+	float: right;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 5px;
+	background-color: #E4DA7E;
+	font-size: 10pt;
+}
+
+.txtmenu {
+	font-size: 11pt;
+}
+
+.ititle {
+	padding: 5px;
+	border-radius: 5px;
+	background-color: #E4DA7E;
+	font-size: 10pt;
+	font-weight: bold;
+	margin-top: 10px;
+}

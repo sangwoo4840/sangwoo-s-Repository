@@ -1,0 +1,182 @@
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+body, table, div, p, button { font-family:'Nanum Gothic'; }
+body { margin: 0px; }
+input[type="range"] { -webkit-appearance: none !important; width: 70%; height: 25px; background: #A3CD99; border: 1px solid darken(#A3CD99, 4%); border-radius: 10px; margin: auto; transition: all 0.3s ease; }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none !important; width: 25px; height: 25px; background: #579E81; border-radius: 30px; box-shadow: 0px 0px 3px darken(#579E81, 15%); transition: all 0.5s ease; }
+/* #603A00    */
+::-webkit-scrollbar { width: 0px; height: 0px; }
+::-webkit-scrollbar-button:start:decrement, 
+::-webkit-scrollbar-button:end:increment { display: block; width: 0px; height: 0px; background: url() rgba(0,0,0,.05); }
+::-webkit-scrollbar-track { background: rgba(0,0,0,.05); }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,.1); }
+
+.invisible { display: none; }
+.baw { color: #AAA; }
+.baw img { -webkit-filter: grayscale(100%); filter: gray; }
+.highlight { color: #579E81; font-weight: bold; }
+
+.frame-header { width: 100%; height: 50px; background: #3E3A3B; user-select: none; }
+.frame-logo { width: 150px; height: 50px; line-height: 50px; vertical-algin: middle; }
+.frame-logo img { height: 50px; }
+
+.frame-navi { width: 25%; float: left; user-select: none; }
+.navi-selected { background: #7F7F7F !important; color: #FFF !important; border-color: #7F7F7F !important; }
+.navi-wrap { width: 100%; margin: 0px; padding: 0px; border-left: 0px; border-right: 1px solid #3E3A3B; float: left; overflow-y: scroll; }
+.navi-menu, #navi-menu-result { width: 100%; height: 70px; line-height: 70px; list-style: none; border-bottom: 1px solid #EFEFEF; font-size: 18pt; font-weight: bold; text-align: center; vertical-align: middle; color: #AFAFAF; }
+.navi-menu-items { width: 100%; list-style: none; border-bottom: 1px solid #EFEFEF; text-align: center; background: #7F7F7F; padding-bottom: 5px; }
+.menu-item-box, .menu-construct-note, .menu-body-note, .menu-door-note, .menu-option-note { width:100%; background: #FFF; border-radius: 10px; padding: 5px 0px 5px; }
+.menu-construct-note, .menu-body-note, .menu-door-note, .menu-option-note { height: 50px; line-height: 50px; text-align: center; vertical-align: middle; }
+.item-list-header { width: 80%; height: 30px; margin: 0 auto; margin-bottom: 20px; padding: 0px; border: 2px solid #579E81; color: #579E81; font-weight: bold; }
+.item-list-header li { height: 30px; line-height: 30px; float: left; list-style: none; margin-right: -2px; border-right: 2px solid #579E81; vertical-align: middle; }
+.list-header-selected { background: #579E81 !important; color: #FFF !important; }
+.item-list { width: 100%; margin: 0 auto; padding: 0px; }
+.item-title { border-bottom: 1px solid #579E81; color: #579E81; font-size: 14pt; font-weight: bold; }
+.item { width: 100%; margin-bottom: 10px; list-style: none; }
+
+#width, #height { margin: 5px; }
+.size-width, .size-height { color: #579E81; font-weight: bold; }
+.btn-width-sub, .btn-width-add, .btn-height-sub, .btn-height-add { width: 25px; }
+
+#navi-menu-construct-item .item-list div { padding: 5px; }
+#navi-menu-construct-item .item-list img { height: 150px; }
+
+#navi-menu-body-item .menu-item-box { text-align: center; }
+#navi-menu-body-item .menu-item-box ul { height: 240px; margin: 0px; padding: 0px; }
+#navi-menu-body-item .menu-item-box li { float: left; list-style: none; }
+#navi-menu-body-item .menu-item-box img { height: 200px; margin: 5px; }
+
+#navi-menu-door-item .menu-item-box { text-align: center; }
+#navi-menu-door-item .menu-item-box img { height: 200px; margin: 5px; }
+
+.btn-door-change, .btn-door-hide { width: 50%; }
+.door-list { margin: 0px; padding: 0px; }
+.door-list li { list-style: none; margin-top: 5px; margin-bottom: 5px; }
+.door-item { width: 100%; height: 240px; margin: 0px; padding: 0px; } /* text-align: center; display: inline-block; *display: inline; }*/
+.door-item li { list-style: none; float: left; text-align: center; font-size: 10pt; }
+.door-item img { height: 200px; margin: 0px !important; }
+
+.option-list { margin: 0px; padding: 0px; }
+.option-list li { height: 100px; list-style: none; margin-top: 5px; margin-bottom: 20px; }
+.option-title { border-bottom: 1px solid #579E81; color: #579E81; font-size: 14pt; font-weight: bold; }
+.add-option, .sub-option { width: 50%; float: left; padding: 5px 0 5px 0; }
+
+.frame-note { width: 75%; float: left; user-select: none; }
+.frame-note div { height: 70px; line-height: 70px; vertical-align: middle; margin-bottom: 100px; color: #3E3A3B; font-weight: bold; }
+.frame-note img { vertical-align: middle; }
+.frame-note p { padding-left: 150px; font-size: 20pt; }
+.frame-note ul { padding-left: 150px; font-size: 20pt; }
+
+.frame-contents { width: 75%; min-height: 600px; float: left; padding-top: 50px; user-select: none; }
+.btn-refresh { position: absolute; top: 50px; right: 5px; height: 30px; line-height: 30px; vertical-align: middle; }
+.btn-refresh img { width: 26px; vertical-align: middle; }
+.frame-measure-horizontal { width: 0px; height: 10px; border: 1px solid #000; border-bottom: 0px; margin: 15px auto; font-size: 10pt; text-align: center; }
+.frame-measure-horizontal span { bottom: 20px; position: relative; }
+.measure-left, .measure-right { width: 0px; float: left; }
+.measure-center { width: 0px; height: 10px;  float: left; border-left: 1px solid #000; border-right: 1px solid #000; }
+.frame-measure-vertical { width: 10px; height: 448px; line-height: 448px; position: relative; border: 1px solid #000; border-left: 0px; font-size: 10pt; text-align: center; float: left; }
+.frame-measure-vertical span { left: 15px; position: relative; }
+.measure-top { height: 0px; border-bottom: 1px solid #000; }
+.measure-bottom { height: 434px; line-height: 434px; }
+.frame-board { width: 0px; height: 0px; border: 1px solid #000; margin: 0 auto; position: relative; background: url('/images/wardrobe/simulation/transparent.jpg'); }
+.frame-body { width: 0px; height: 434px; position: absolute; left: 0px; bottom: 0px; display: block; }
+.body-box {  cursor: pointer; float: left; }
+.body-check { z-index: 10; position: absolute; background: url('/images/wardrobe/simulation/ic_check_body.png'); background-repeat: no-repeat; background-position: center; }
+
+.width-1140 { width: 228px; height: 434px; }
+.check-1140 { width: 224px; height: 430px; border: 2px solid #F00; }
+.door-1140 { width: 228px; height: 434px;  z-index: 5; position: absolute; }
+.option-1140 { width: 228px; height: 434px;  z-index: 3; position: absolute; }
+.width-978 { width: 195.6px; height: 434px; }
+.check-978 { width: 191.6px; height: 430px; border: 2px solid #F00; }
+.door-978 { width: 195.6px; height: 434px;  z-index: 5; position: absolute; }
+.option-978 { width: 195.6px; height: 434px;  z-index: 3; position: absolute; }
+
+.width-1000 { width: 200px; height: 434px; }
+.check-1000 { width: 196px; height: 430px; border: 2px solid #F00; }
+.door-1000 { width: 200px; height: 434px;  z-index: 5; position: absolute; }
+.option-1000 { width: 200px; height: 434px;  z-index: 3; position: absolute; }
+.width-900 { width: 180px; height: 434px; }
+.check-900 { width: 176px; height: 430px; border: 2px solid #F00; }
+.door-900 { width: 180px; height: 434px;  z-index: 5; position: absolute; }
+.option-900 { width: 180px; height: 434px;  z-index: 3; position: absolute; }
+.width-500 { width: 100px; height: 434px; }
+.check-500 { width: 96px; height: 430px; border: 2px solid #F00; }
+.door-500 { width: 100px; height: 434px;  z-index: 5; position: absolute; }
+.width-450 { width: 90px; height: 434px; }
+.check-450 { width: 86px; height: 430px; border: 2px solid #F00; }
+.door-450 { width: 90px; height: 434px;  z-index: 5; position: absolute; }
+.width-260 { width: 52px; height: 434px; }
+.check-260 { width: 48px; height: 430px; border: 2px solid #F00; }
+.door-left, .door-right { width: 50%; height: 100%; float: left; }
+.door-center { width: 100%; height: 100%; }
+.option-item { width: 100%; height: 100%; position: absolute; }
+
+.frame-footer { width: 100%; height: 199px; border-top: 1px solid #3E3A3B; background: #FFF; position: absolute; bottom: 0px; z-index: 9999; user-select: none; }
+.footer-note { height: 100%; line-height: 199px; text-align: center; vertical-align: middle; font-size: 24pt; }
+.footer-note img { vertical-align: middle; }
+.note-construct div { height: 99px; line-height: 99px; }
+.note-door div { height: 66px; line-height: 66px; }
+
+.body-blind { width: 100%; height: 120%; position: absolute; z-index: 999; }
+.result-table { width: 50%; margin: 0 auto; margin-top: 30px; padding: 20px; }
+.result-retry, .result-door { border: 1px solid black; padding: 5px; margin: 5px; }
+.result-save-box { margin-top: 25px; }
+.result-save { border: 1px solid black; padding: 5px; margin: 5px; }
+
+.loading { width: 100%; height: 100%; position: fixed; top: 0; opacity: 0.5; background: #000000; background-image: url('/images/wardrobe/simulation/loading.gif'); background-size: 100px 100px; background-repeat: no-repeat; background-position: center; z-index: 9999; }
+
+@media screen and (min-width:1551px) {
+.navi-wrap { height: 100%; }
+}
+
+@media screen and (max-width:1550px) {
+.navi-menu { font-size: 16pt; }
+.navi-wrap { border-bottom: 1px solid #3E3A3B; }
+#navi-menu-construct-item .item-list img { height: 75px; }
+.menu-construct-note { font-size: 9pt; }
+#navi-menu-body-item .menu-item-box ul { height: 130px; margin: 0px; padding: 0px; font-size: 9pt; }
+#navi-menu-body-item .menu-item-box img { height: 100px; margin: 5px; }
+#navi-menu-door-item .menu-item-box img { height: 100px; margin: 5px; }
+#navi-menu-body-item .menu-item-box { font-size: 9pt; }
+#navi-menu-door-item .menu-item-box { font-size: 9pt; }
+#navi-menu-option-item .menu-item-box { font-size: 9pt; }
+.frame-header { position: fixed; top: 0; z-index: 9999; }
+.frame-navi { position: relative; width: 250px; top: 50px; }
+.frame-note { position: fixed; left: 250px; }
+.frame-contents { position: fixed; width: 75%; min-height: 300px; float: left; padding-top: 150px; user-select: none; top: 0px; left: 250px; }
+.door-item { width: 100%; height: 130px; margin: 0px; padding: 0px; }
+.door-item li { list-style: none; float: left; text-align: center; font-size: 8pt; }
+.item-title { border-bottom: 1px solid #579E81; color: #579E81; font-size: 12pt; font-weight: bold; }
+.frame-footer { height: 0px; border: 0px; display: none; }
+.frame-note p { padding-left: 100px; font-size: 17pt; }
+.frame-note ul { padding-left: 100px; font-size: 17pt; }
+.frame-measure-vertical { width: 10px; height: 217px; line-height: 217px; position: relative; border: 1px solid #000; border-left: 0px; font-size: 10pt; text-align: center; float: left; }
+.measure-bottom { height: 217px; line-height: 217px; }
+.frame-body { width: 0px; height: 217px; position: absolute; left: 0px; bottom: 0px; display: block; }
+
+.width-1140, .width-1140 img { width: 114px; height: 217px; }
+.check-1140 { width: 112px; height: 215px; border: 2px solid #F00; }
+.door-1140 { width: 114px; height: 217px;  z-index: 5; position: absolute; }
+.option-1140 { width: 114px; height: 217px;  z-index: 3; position: absolute; }
+.width-978, .width-978 img { width: 97.8px; height: 217px; }
+.check-978 { width: 95.8px; height: 215px; border: 2px solid #F00; }
+.door-978 { width: 97.8px; height: 217px;  z-index: 5; position: absolute; }
+.option-978 { width: 97.8px; height: 217px;  z-index: 3; position: absolute; }
+
+.width-1000, .width-1000 img { width: 100px; height: 217px; }
+.check-1000 { width: 96px; height: 215px; border: 2px solid #F00; }
+.door-1000 { width: 100px; height: 217px;  z-index: 5; position: absolute; }
+.option-1000 { width: 100px; height: 217px;  z-index: 3; position: absolute; }
+.width-900, .width-900 img { width: 90px; height: 217px; }
+.check-900 { width: 86px; height: 215px; border: 2px solid #F00; }
+.door-900 { width: 90px; height: 217px;  z-index: 5; position: absolute; }
+.option-900 { width: 90px; height: 217px;  z-index: 3; position: absolute; }
+.width-500, .width-500 img { width: 50px; height: 217px; }
+.check-500 { width: 46px; height: 215px; border: 2px solid #F00; }
+.door-500 { width: 50px; height: 217px;  z-index: 5; position: absolute; }
+.width-450, .width-450 img { width: 45px; height: 217px; }
+.check-450 { width: 43px; height: 215px; border: 2px solid #F00; }
+.door-450 { width: 45px; height: 217px;  z-index: 5; position: absolute; }
+.width-260, .width-260 img { width: 26px; height: 217px; }
+.check-260 { width: 22px; height: 215px; border: 2px solid #F00; }
+}

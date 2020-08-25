@@ -1,0 +1,60 @@
+body { font-size: 9pt;}
+input { width: 40px; font-size: 9pt;}
+table { border-collapse: collapse; width: 100%; max-width: 900px;}
+#contents { max-width: 900px; margin: 0 auto;}
+#top { padding-bottom: 5px; margin-bottom: 5px; border-bottom: 1px solid #aaa;}
+
+#slideList { height: 22px; max-width: 150px; border-color: #DEB84F; background-color: white;}
+a.lnbtn { display:inline-block; height:20px; padding:0 14px 0; border:1px solid #DEB84F; background-color:#DEB84F; font-size:13px; color:#fff; line-height:20px; text-decoration: none;}	
+a.lnbtn:hover { border: 1px solid #CCA63D; background-color:#CCA63D; color:#fff;}
+
+#menuInfo, #menuOption { cursor: pointer;}
+
+#kind { height: 19px; border: 0; background-color: white;}
+#slideInfo, #slideOption { border: 1px solid #997000;	text-align: center;}
+.infoHdr { background-color: #997000; color: white; cursor: default !important;}
+.change_lr { background-color:#DEB84F !important; background-image: url('/images/ic_change.png'); background-repeat: no-repeat; background-position: right; cursor: pointer;}
+
+#itemList thead { color: white;	background-color: #CCA63D;}
+#itemList th { border: 1px solid #DEB84F;}
+#itemList td { padding: 0 5px 0 5px;	height: 20px;}
+#itemListBody { font-size: 7pt;}
+.r1 { background-color: #FFFFDF;}
+.rh { background-color: #E4F7BA;	font-weight: bold;	text-align: center;}
+.rt { background-color: #FFEE85;	font-weight: bold;}
+.rs { background-color: #F2CB61;	font-weight: bold;	text-align: center;	cursor: pointer;}
+
+.layer { display:none; position:fixed; _position:absolute; top:0; left:0; width:100%; height:100%; z-index:100;}
+.layer .bg { position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:.5; filter:alpha(opacity=50);}
+.layer .pop-layer { display:block;}
+
+.pop-layer { display:none; position: absolute; top: 50%; left: 50%; width: 200px; height:auto;  background-color:#fff; border: 5px solid #CCA63D; z-index: 10;}	
+.pop-layer .pop-container { padding: 20px 25px;}
+.pop-layer p.ctxt { color: #666; line-height: 25px;}
+.pop-layer .btn-r { width: 100%; margin:10px 0 5px; padding-top: 10px; border-top: 1px solid #DDD; text-align:right;}
+
+a.cbtn { display:inline-block; height:25px; padding:0 14px 0; border:1px solid #DEB84F; background-color:#DEB84F; font-size:13px; color:#fff; line-height:25px;}	
+a.cbtn:hover { border: 1px solid #CCA63D; background-color:#CCA63D; color:#fff;}
+
+#storeAlert { color: red; font-size: 9pt;}
+
+.wrap-loading{ /*화면 전체를 어둡게 합니다.*/
+	position: fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	background: rgba(0,0,0,0.2); /*not in ie */
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#20000000', endColorstr='#20000000');    /* ie */
+	z-index: 9999;
+}
+.wrap-loading div{ /*로딩 이미지*/
+	position: fixed;
+	top:50%;
+	left:50%;
+	margin-left: -40px;
+	margin-top: -60px;
+}
+.display-none{ /*감추기*/
+	display:none;
+}
